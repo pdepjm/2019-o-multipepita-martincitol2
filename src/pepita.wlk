@@ -33,17 +33,17 @@ object pepita {
 	}
 
 	method salirAComer(){
-		vola(5)
-		come(alpiste)
-		vola(5)
+		self.vola(5)
+		self.come(alpiste)
+		self.vola(5)
 	}
 
 	method haceLoQueQuieras(){
-		if(estaFeliz()){
-			vola(8)
+		if(self.estaFeliz()){
+			self.vola(8)
 		}
-		if(estaCansada()){
-			come(alpiste)
+		if(self.estaCansada()){
+			self.come(alpiste)
 		}
 	}
 }
@@ -58,7 +58,7 @@ object mijo {
 	}
 
 	method secarse(){
-		if(seco==false){
+		if(!seco){
 			seco = true
 		}
 	}
@@ -72,13 +72,15 @@ method energiaQueOtorga() {
 
 }
 
+}
+
 object canelones{
 	var energiaBase = 20
 	var salsa = false
 	var queso = false
 
 method ponerSalsa(){
-	if(salsa==false){
+	if(!salsa){
 		salsa = true
 	}
 }
@@ -88,7 +90,7 @@ method sacarSalsa(){
 	}
 }
 method ponerQueso(){
-	if(queso==false){
+	if(!queso){
 		queso = true
 	}
 }
